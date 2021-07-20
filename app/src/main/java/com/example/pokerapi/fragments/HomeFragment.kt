@@ -19,8 +19,8 @@ import com.example.pokerapi.viewModel.PokemonViewModel
 
 
 class HomeFragment : Fragment() {
-   // lateinit var adapterPokemon: AdapterPokemon
-  //  private lateinit  var recicleView : RecyclerView
+   lateinit var adapterPokemon: AdapterPokemon
+   private lateinit  var recicleView : RecyclerView
     private  val pokemon : MutableList<PokemonApiResult> = mutableListOf()
 
     private val pokemonViewModel by lazy {
@@ -31,21 +31,21 @@ class HomeFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
+
         val view = inflater.inflate(R.layout.fragment_home, container, false)
-      //  recicleView = view.findViewById(R.id.recyclerViewPokemon)
+       recicleView = view.findViewById(R.id.recyclerViewPokemon)
         return view
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-       /* adapterPokemon = AdapterPokemon(pokemon)
+        adapterPokemon = AdapterPokemon(pokemon)
         recicleView.apply {
             layoutManager = LinearLayoutManager(context)
             adapter = adapterPokemon
             hasFixedSize()
 
-        }*/
+        }
         pokemonViewModel.pokomonlivedata.observe(viewLifecycleOwner,{pokemon -> updateData(pokemon.results)})
     }
 
@@ -53,7 +53,7 @@ class HomeFragment : Fragment() {
     private fun updateData(data: List<PokemonApiResult>) {
         pokemon.clear()
         pokemon.addAll(data)
-       // adapterPokemon.notifyDataSetChanged()
+        adapterPokemon.notifyDataSetChanged()
 
 
     }
