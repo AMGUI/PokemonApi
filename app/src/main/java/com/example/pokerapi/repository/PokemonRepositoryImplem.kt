@@ -11,15 +11,13 @@ class PokemonRepositoryImplem(private val pokemonApi: PokemonApi):PokemonReposit
     override suspend fun requestPokemons(offset: String, limit: String): PokemonResponse {
         return try {
             val response = withContext(Dispatchers.IO) {
-                pokemonApi.getPokemons("1", "151")
+                pokemonApi.getPokemons("0", "151")
             }
             response
 
         } catch (e: Exception) {
-            Log.d("Erro", "pokemon deu ruin")
+            Log.d("Erro", "pokemon deu ruim")
             throw e
-
-
 
         }
 

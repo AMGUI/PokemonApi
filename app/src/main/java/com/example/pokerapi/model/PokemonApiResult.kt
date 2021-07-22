@@ -10,4 +10,9 @@ data class PokemonApiResult(
     @SerializedName("url")
     val url: String
 
-): Parcelable
+): Parcelable {
+
+    val id: String get() = url.split("/".toRegex()).dropLast(1).last()
+
+    val img: String get() = "https://pokeres.bastionbot.org/images/pokemon/$id.png"
+}

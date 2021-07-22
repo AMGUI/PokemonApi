@@ -34,7 +34,7 @@ class AdapterPokemon(private val pokemons: List<PokemonApiResult>):RecyclerView.
 
         fun bind(entPokemon:PokemonApiResult){
             nomePokemon.text = entPokemon.name
-            Glide.with(itemView.context).load(entPokemon.url).into(imagemPokemon)
+            Glide.with(itemView.context).load(entPokemon.img).into(imagemPokemon)
         }
 
     }
