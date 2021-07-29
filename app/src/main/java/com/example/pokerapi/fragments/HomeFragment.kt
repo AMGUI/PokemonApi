@@ -16,16 +16,21 @@ import com.example.pokerapi.model.PokemonApiResult
 import com.example.pokerapi.model.PokemonResponse
 import com.example.pokerapi.viewModel.FactoreViewModal
 import com.example.pokerapi.viewModel.PokemonViewModel
+import org.koin.androidx.viewmodel.ext.android.viewModel
 
 
 class HomeFragment : Fragment() {
    lateinit var adapterPokemon: AdapterPokemon
    private lateinit  var recicleView : RecyclerView
-    private  val pokemon : MutableList<PokemonApiResult> = mutableListOf()
+   private  val pokemon : MutableList<PokemonApiResult> = mutableListOf()
+   private val pokemonViewModel : PokemonViewModel by viewModel()
 
+    /*
     private val pokemonViewModel by lazy {
         ViewModelProvider(this, FactoreViewModal()).get(PokemonViewModel::class.java)
     }
+
+     */
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,

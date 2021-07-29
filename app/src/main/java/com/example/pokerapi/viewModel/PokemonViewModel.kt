@@ -5,10 +5,12 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.example.pokerapi.model.PokemonResponse
+import com.example.pokerapi.network.PokemonApi
+import com.example.pokerapi.repository.PokemonRepository
 import com.example.pokerapi.repository.PokemonRepositoryImplem
 import kotlinx.coroutines.launch
 
-class PokemonViewModel( private val repositoryImplem: PokemonRepositoryImplem): ViewModel() {
+class PokemonViewModel( private val repositoryImplem: PokemonRepository): ViewModel() {
     private val _pokomonReponse: MutableLiveData<PokemonResponse> = MutableLiveData()
      val pokomonlivedata: LiveData<PokemonResponse> get() = _pokomonReponse
 

@@ -3,7 +3,6 @@ package com.example.pokerapi.repository
 import android.util.Log
 import com.example.pokerapi.model.PokemonResponse
 import com.example.pokerapi.network.PokemonApi
-import com.example.pokerapi.network.PokemonService
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 
