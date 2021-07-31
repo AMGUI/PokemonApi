@@ -16,7 +16,7 @@
     <color name="lightBlue">#58ABF6</color>
     <color name="lightBrown">#CA8179</color>
     <color name="lighterGrey">#F4F5F4</color>
-    <color name="lightGrey">#F5F5F5</color>
+    <color name="lightGrey">#DCF5F5F5</color>
     <color name="lightPurple">#9F5BBA</color>
     <color name="lightRed">#F7786B</color>
     <color name="lightTeal">#2CDAB1</color>
@@ -25,4 +25,5 @@
     <color name="red">#FA6555</color>
     <color name="teal">#4FC1A6</color>
     <color name="yellow">#F6C747</color>
+    <color name="water">#6AB9DC</color>
 </resources>

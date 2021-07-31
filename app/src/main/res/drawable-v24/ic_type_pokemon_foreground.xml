@@ -6,7 +6,7 @@
     <item >
         <shape>
             <!-- Color doesn't matter -->
-            <solid android:color="@color/ic_type_pokemon_background" />
+            <solid android:color="@color/water" />
             <corners android:radius="360dp" />
         </shape>
     </item>

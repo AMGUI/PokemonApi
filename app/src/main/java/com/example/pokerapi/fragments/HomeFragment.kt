@@ -8,6 +8,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModelProvider
+import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.pokerapi.R
@@ -46,7 +47,7 @@ class HomeFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         adapterPokemon = AdapterPokemon(pokemon)
         recicleView.apply {
-            layoutManager = LinearLayoutManager(context)
+            layoutManager = GridLayoutManager(context, 2) //LinearLayoutManager(context)
             adapter = adapterPokemon
             hasFixedSize()
 
