@@ -1,21 +1,15 @@
 package com.example.pokerapi.fragments
 
 import android.os.Bundle
-import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.lifecycle.MutableLiveData
-import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.GridLayoutManager
-import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.pokerapi.R
 import com.example.pokerapi.adapter.AdapterPokemon
 import com.example.pokerapi.model.PokemonApiResult
-import com.example.pokerapi.model.PokemonResponse
-import com.example.pokerapi.viewModel.FactoreViewModal
 import com.example.pokerapi.viewModel.PokemonViewModel
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
@@ -26,12 +20,6 @@ class HomeFragment : Fragment() {
    private  val pokemon : MutableList<PokemonApiResult> = mutableListOf()
    private val pokemonViewModel : PokemonViewModel by viewModel()
 
-    /*
-    private val pokemonViewModel by lazy {
-        ViewModelProvider(this, FactoreViewModal()).get(PokemonViewModel::class.java)
-    }
-
-     */
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,

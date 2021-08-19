@@ -1,5 +1,6 @@
 package com.example.pokerapi.adapter
 
+import android.content.res.Resources
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -33,8 +34,11 @@ class AdapterPokemon(private val pokemons: List<PokemonApiResult>):RecyclerView.
         private val imagemPokemon: ImageView =itemView.findViewById(R.id.imageViewPokemon)
 
         fun bind(entPokemon:PokemonApiResult){
+
             nomePokemon.text = entPokemon.name
-            Glide.with(itemView.context).load(entPokemon.img).into(imagemPokemon)
+            imagemPokemon.setImageResource(entPokemon.getThumbnail(itemView.context))
+
+            
         }
 
     }
