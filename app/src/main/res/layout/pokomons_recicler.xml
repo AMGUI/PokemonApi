@@ -27,7 +27,7 @@
                 style="@style/styleFrameType">
 
                 <ImageView
-                    android:id="@+id/imageTipo3"
+                    android:id="@+id/imageTipo01"
                     style="@style/imagemDoTipo"
                     app:srcCompat="@drawable/flying" />
             </FrameLayout>
@@ -37,7 +37,7 @@
                 style="@style/styleFrameType">
 
                 <ImageView
-                    android:id="@+id/imageTipo2"
+                    android:id="@+id/imageTipo02"
                     style="@style/imagemDoTipo"
                     app:srcCompat="@drawable/fire" />
             </FrameLayout>
@@ -47,7 +47,7 @@
                 style="@style/styleFrameType">
 
                 <ImageView
-                    android:id="@+id/imageTipo1"
+                    android:id="@+id/imageTipo03"
                     style="@style/imagemDoTipo"
                     app:srcCompat="@drawable/dragon" />
             </FrameLayout>

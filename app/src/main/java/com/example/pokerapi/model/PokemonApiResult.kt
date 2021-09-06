@@ -10,13 +10,15 @@ data class PokemonApiResult(
     @SerializedName("name")
      val name: String,
     @SerializedName("id")
-    val id: String
+    val id: String,
+    @SerializedName("types")
+    val types: List<PokemonTypes>
+
 
 
 
 ): Parcelable {
 
-  //  val id: String get() = url.split("/".toRegex()).dropLast(1).last()
 
     fun getnameImg():String{
         return "p"+id

@@ -34,10 +34,15 @@ class AdapterPokemon(private val pokemons: List<PokemonApiResult>):RecyclerView.
 
         private val nomePokemon: TextView =itemView.findViewById(R.id.nomePokemon)
         private val imagemPokemon: ImageView =itemView.findViewById(R.id.imageViewPokemon)
-        private val frameTipo1: FrameLayout = itemView.findViewById(R.id.frameTipo1)
         private val frameTipo2: FrameLayout = itemView.findViewById(R.id.frameTipo2)
         private val frameTipo3: FrameLayout = itemView.findViewById(R.id.frameTipo3)
+        private val imageTipo01: ImageView =itemView.findViewById(R.id.imageTipo01)
+        private val imageTipo02: ImageView =itemView.findViewById(R.id.imageTipo02)
+        private val imageTipo03: ImageView =itemView.findViewById(R.id.imageTipo03)
+
+
         fun bind(entPokemon:PokemonApiResult){
+            imageTipo01.setImageResource(R.drawable.normal)
             frameTipo2.isGone = true
             frameTipo3.isGone = true
 
