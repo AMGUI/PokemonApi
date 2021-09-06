@@ -22,7 +22,9 @@
             android:orientation="vertical"
             android:paddingLeft="5dp">
 
-            <FrameLayout style="@style/styleFrameType">
+            <FrameLayout
+                android:id="@+id/frameTipo1"
+                style="@style/styleFrameType">
 
                 <ImageView
                     android:id="@+id/imageTipo3"
@@ -30,7 +32,9 @@
                     app:srcCompat="@drawable/flying" />
             </FrameLayout>
 
-            <FrameLayout style="@style/styleFrameType">
+            <FrameLayout
+                android:id="@+id/frameTipo2"
+                style="@style/styleFrameType">
 
                 <ImageView
                     android:id="@+id/imageTipo2"
@@ -38,7 +42,9 @@
                     app:srcCompat="@drawable/fire" />
             </FrameLayout>
 
-            <FrameLayout style="@style/styleFrameType">
+            <FrameLayout
+                android:id="@+id/frameTipo3"
+                style="@style/styleFrameType">
 
                 <ImageView
                     android:id="@+id/imageTipo1"

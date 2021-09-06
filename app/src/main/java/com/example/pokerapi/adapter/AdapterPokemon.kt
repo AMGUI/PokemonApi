@@ -1,15 +1,17 @@
 package com.example.pokerapi.adapter
 
-import android.content.res.Resources
+
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.FrameLayout
 import android.widget.ImageView
 import android.widget.TextView
+import androidx.core.view.isGone
 import androidx.recyclerview.widget.RecyclerView
-import com.bumptech.glide.Glide
 import com.example.pokerapi.R
 import com.example.pokerapi.model.PokemonApiResult
+import com.example.pokerapi.model.PokemonDetails
 
 
 class AdapterPokemon(private val pokemons: List<PokemonApiResult>):RecyclerView.Adapter<AdapterPokemon.ViewHolder>() {
@@ -32,13 +34,18 @@ class AdapterPokemon(private val pokemons: List<PokemonApiResult>):RecyclerView.
 
         private val nomePokemon: TextView =itemView.findViewById(R.id.nomePokemon)
         private val imagemPokemon: ImageView =itemView.findViewById(R.id.imageViewPokemon)
-
+        private val frameTipo1: FrameLayout = itemView.findViewById(R.id.frameTipo1)
+        private val frameTipo2: FrameLayout = itemView.findViewById(R.id.frameTipo2)
+        private val frameTipo3: FrameLayout = itemView.findViewById(R.id.frameTipo3)
         fun bind(entPokemon:PokemonApiResult){
+            frameTipo2.isGone = true
+            frameTipo3.isGone = true
 
             nomePokemon.text = entPokemon.name
             imagemPokemon.setImageResource(entPokemon.getThumbnail(itemView.context))
-
             
+
+
         }
 
     }

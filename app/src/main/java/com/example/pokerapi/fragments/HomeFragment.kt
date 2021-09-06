@@ -10,15 +10,17 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.pokerapi.R
 import com.example.pokerapi.adapter.AdapterPokemon
 import com.example.pokerapi.model.PokemonApiResult
+import com.example.pokerapi.model.PokemonDetails
+import com.example.pokerapi.model.PokemonTypes
 import com.example.pokerapi.viewModel.PokemonViewModel
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
 
 class HomeFragment : Fragment() {
    lateinit var adapterPokemon: AdapterPokemon
-   private lateinit  var recicleView : RecyclerView
+   private  lateinit  var recicleView : RecyclerView
    private  val pokemon : MutableList<PokemonApiResult> = mutableListOf()
-   private val pokemonViewModel : PokemonViewModel by viewModel()
+   private  val pokemonViewModel : PokemonViewModel by viewModel()
 
 
     override fun onCreateView(
@@ -46,7 +48,7 @@ class HomeFragment : Fragment() {
 
     private fun updateData(data: List<PokemonApiResult>) {
         pokemon.clear()
-        pokemon.addAll(data)
+        pokemon.addAll((data))
         adapterPokemon.notifyDataSetChanged()
 
 

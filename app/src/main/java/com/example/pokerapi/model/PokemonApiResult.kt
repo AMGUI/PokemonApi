@@ -6,17 +6,20 @@ import kotlinx.android.parcel.Parcelize
 
 @Parcelize
 data class PokemonApiResult(
+
     @SerializedName("name")
      val name: String,
-    @SerializedName("url")
-    val url: String
+    @SerializedName("id")
+    val id: String
+
+
 
 ): Parcelable {
 
-    val id: String get() = url.split("/".toRegex()).dropLast(1).last()
+  //  val id: String get() = url.split("/".toRegex()).dropLast(1).last()
 
     fun getnameImg():String{
-        return "p"+id.toString()
+        return "p"+id
     }
 
     fun getThumbnail(context: Context): Int {
@@ -24,5 +27,4 @@ data class PokemonApiResult(
                 .getIdentifier(getnameImg(),"drawable",context.packageName)
     }
 
-    //val img: String get() = "https://pokeres.bastionbot.org/images/pokemon/$id.png"
 }

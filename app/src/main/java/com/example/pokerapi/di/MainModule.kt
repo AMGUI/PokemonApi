@@ -15,7 +15,8 @@ import retrofit2.converter.gson.GsonConverterFactory
 val mainModule = module{
 
     single { Retrofit.Builder()
-        .baseUrl("https://pokeapi.co/api/v2/")
+        //.baseUrl("https://pokeapi.co/api/v2/")
+        .baseUrl("https://amgui.github.io/pokemon-data/")
         .addConverterFactory(GsonConverterFactory.create())
         .build() }
 

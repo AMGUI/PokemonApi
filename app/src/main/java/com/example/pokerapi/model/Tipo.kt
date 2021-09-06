@@ -4,6 +4,7 @@ import android.os.Parcelable
 import kotlinx.android.parcel.Parcelize
 
 @Parcelize
-data class PokemonResponse(
-        val results: List<PokemonApiResult>
-) : Parcelable
+data class Tipo (
+        val name:String,
+        val url: String
+        ): Parcelable
