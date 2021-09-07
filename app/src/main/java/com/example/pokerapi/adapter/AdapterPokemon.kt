@@ -12,6 +12,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.pokerapi.R
 import com.example.pokerapi.model.PokemonApiResult
 import com.example.pokerapi.model.PokemonDetails
+import com.example.pokerapi.model.PokemonTypes
 
 
 class AdapterPokemon(private val pokemons: List<PokemonApiResult>):RecyclerView.Adapter<AdapterPokemon.ViewHolder>() {
@@ -42,9 +43,13 @@ class AdapterPokemon(private val pokemons: List<PokemonApiResult>):RecyclerView.
 
 
         fun bind(entPokemon:PokemonApiResult){
-            imageTipo01.setImageResource(R.drawable.normal)
-            frameTipo2.isGone = true
-            frameTipo3.isGone = true
+
+            imageTipo01.setImageResource(entPokemon.types[0].type.getThumbnail(itemView.context))
+
+            frameTipo2.isGone = entPokemon.setSolot(entPokemon.types,2)
+            if (frameTipo2.isGone == false) imageTipo02.setImageResource(entPokemon.types[1].type.getThumbnail(itemView.context))
+            frameTipo3.isGone = entPokemon.setSolot(entPokemon.types,3)
+            if (frameTipo3.isGone == false) imageTipo03.setImageResource(entPokemon.types[2].type.getThumbnail(itemView.context))
 
             nomePokemon.text = entPokemon.name
             imagemPokemon.setImageResource(entPokemon.getThumbnail(itemView.context))

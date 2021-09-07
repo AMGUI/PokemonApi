@@ -28,5 +28,8 @@ data class PokemonApiResult(
         return context.resources
                 .getIdentifier(getnameImg(),"drawable",context.packageName)
     }
+        fun setSolot(tipo :List<PokemonTypes>, int: Int): Boolean{
 
+            return tipo.size < int
+        }
 }
