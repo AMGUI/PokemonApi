@@ -30,6 +30,7 @@
                     android:id="@+id/imageTipo01"
                     style="@style/imagemDoTipo"
                     app:srcCompat="@drawable/flying" />
+
             </FrameLayout>
 
             <FrameLayout

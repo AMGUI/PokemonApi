@@ -4,7 +4,7 @@
     <style name="styleFrameType">
         <item name="android:layout_width">25dp</item>
         <item name="android:layout_height">25dp</item>
-        <item name="android:background">@drawable/ic_type_pokemon_foreground</item>
+        <item name="android:background">@drawable/ic_type_water_foreground</item>
         <item name="android:layout_gravity">center</item>
         <item name="android:layout_marginBottom">8dp</item>
     </style>

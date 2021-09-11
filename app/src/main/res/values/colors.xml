@@ -25,5 +25,21 @@
     <color name="red">#FA6555</color>
     <color name="teal">#4FC1A6</color>
     <color name="yellow">#F6C747</color>
-    <color name="water">#6AB9DC</color>
+    <color name="water">#0e9ef2</color>
+    <color name="bug">#92bb2d</color>
+    <color name="dragon">#0c69c8</color>
+    <color name="electric">#f2d94e</color>
+    <color name="fairy">#f3afed</color>
+    <color name="grass">#4aaf4c</color>
+    <color name="fire">#f09646</color>
+    <color name="flying">#a1bbec</color>
+    <color name="normal">#9fa39d</color>
+    <color name="ghost">#3b59ef</color>
+    <color name="psychic">#f76961</color>
+    <color name="fighting">#ca3f5b</color>
+    <color name="rock">#c9bb8a</color>
+
+
+
+
 </resources>
