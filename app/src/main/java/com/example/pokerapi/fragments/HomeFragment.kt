@@ -1,10 +1,10 @@
 package com.example.pokerapi.fragments
 
 import android.os.Bundle
+import android.view.*
 import androidx.fragment.app.Fragment
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
+import android.widget.TextView
+import android.widget.Toast
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.pokerapi.R
@@ -30,6 +30,8 @@ class HomeFragment : Fragment() {
 
         val view = inflater.inflate(R.layout.fragment_home, container, false)
        recicleView = view.findViewById(R.id.recyclerViewPokemon)
+
+        setHasOptionsMenu(true)
         return view
     }
 
@@ -53,6 +55,22 @@ class HomeFragment : Fragment() {
 
 
     }
+
+    override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
+        inflater.inflate(R.menu.nav_busca,menu)
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        when(item.itemId){
+            R.id.op01 -> {
+                Toast.makeText(context, "tudo oks", Toast.LENGTH_SHORT).show()
+            }
+        }
+
+
+        return true
+    }
+
 
 
 }

@@ -58,7 +58,8 @@ class AdapterPokemon(private val pokemons: List<PokemonApiResult>):RecyclerView.
                 type.getThumbnail(itemView.context,frameTipo3))
             }
 
-            nomePokemon.text = entPokemon.name
+            nomePokemon.text = entPokemon.name.substring(0,1).toUpperCase() + entPokemon.name.substring(1)
+
             imagemPokemon.setImageResource(entPokemon.getThumbnail(itemView.context))
             
 

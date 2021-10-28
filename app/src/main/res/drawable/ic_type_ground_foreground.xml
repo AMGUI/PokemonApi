@@ -6,11 +6,9 @@
 
 
     <item >
-
         <shape>
             <!-- Color doesn't matter -->
-            <solid android:color="@color/bug" />
-
+            <solid android:color="@color/ground" />
             <corners android:radius="360dp" />
         </shape>
     </item>

@@ -72,6 +72,10 @@ dependencies {
 // SLF4J Logger
     implementation "io.insert-koin:koin-logger-slf4j:$koin_version"
 
+    //fabe view bonitin
+    implementation "com.leinardi.android:speed-dial:1.0-alpha06"
+  //  implementation 'com.github.leinardi:FloatingActionButtonSpeedDial:master-SNAPSHOT'
+
 
     //glide
     implementation 'com.github.bumptech.glide:glide:4.12.0'

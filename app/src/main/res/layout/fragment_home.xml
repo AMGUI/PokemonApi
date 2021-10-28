@@ -6,20 +6,30 @@
     android:layout_height="match_parent"
     tools:context="com.example.pokerapi.fragments.HomeFragment">
 
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerViewPokemon"
         android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:layout_height="wrap_content"
+        android:overScrollMode="never"
         android:paddingStart="8dp"
         android:paddingEnd="8dp"
-        android:overScrollMode="never"
         app:layoutManager="GridLayoutManager"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar2"
         tools:itemCount="20"
         tools:listitem="@layout/pokomons_recicler"
-        tools:spanCount="2"
-        />
+        tools:spanCount="2" />
 </androidx.constraintlayout.widget.ConstraintLayout>
