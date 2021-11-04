@@ -74,7 +74,7 @@ dependencies {
 
     //fabe view bonitin
     implementation "com.leinardi.android:speed-dial:1.0-alpha06"
-  //  implementation 'com.github.leinardi:FloatingActionButtonSpeedDial:master-SNAPSHOT'
+//    implementation 'com.github.leinardi:FloatingActionButtonSpeedDial:master-SNAPSHOT'
 
 
     //glide
